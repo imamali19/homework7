@@ -1,0 +1,35 @@
+﻿namespace WebApplication8.Views
+{
+    public class Search
+    {
+<h2>Search Book</h2>
+
+<form method="get">
+
+    ISBN:
+    <input type="text" name="isbn" />
+
+    <button type="submit">
+        Search
+    </button>
+
+</form>
+
+<br />
+
+Result:
+
+<br />
+
+Book Name: @Model.BookName
+<br />
+
+ISBN: @Model.ISBN
+<br />
+
+Author: @Model.Author
+<br />
+
+Shelf No: @Model.ShelfNo
+    }
+}

@@ -1,0 +1,50 @@
+﻿@model List<WebApplication8.Models.Book>
+
+<h2>Books List</h2>
+
+<!-- SEARCH -->
+<form method="get" asp-action="Index">
+    <input type="text"
+           name="search"
+           placeholder="Book name search..." />
+
+    <button type="submit">
+        Search
+    </button>
+</form>
+
+<br />
+
+<table border="1">
+
+    <tr>
+        <th>Book Name</th>
+        <th>ISBN</th>
+        <th>Author</th>
+        <th>Shelf No</th>
+        <th>Action</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.BookName</td>
+            <td>@item.ISBN</td>
+            <td>@item.Author</td>
+            <td>@item.ShelfNo</td>
+
+            <td>
+                <a href="/Home/Edit/@item.Id">
+                    Edit
+                </a>
+
+                |
+
+                <a href="/Home/Delete/@item.ISBN">
+                    Delete
+                </a>
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,33 @@
+﻿@model WebApplication8.Models.Book
+
+<h2>Edit Book</h2>
+
+<form method="post">
+
+    <input type="hidden" asp-for="Id" />
+
+    <label>Book Name</label>
+    <input asp-for="BookName" />
+
+    <br />
+
+    <label>ISBN</label>
+    <input asp-for="ISBN" />
+
+    <br />
+
+    <label>Author</label>
+    <input asp-for="Author" />
+
+    <br />
+
+    <label>Shelf No</label>
+    <input asp-for="ShelfNo" />
+
+    <br /><br />
+
+    <button type="submit">
+        Save
+    </button>
+
+</form>
